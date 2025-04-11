@@ -7,29 +7,37 @@ Ici, elle affiche qu'il n'y a aucun commit, et me propose d'ajouter avec git add
 
 3)Ils sont partis dans la staging area .
 
-4)git commit -m Salut
+4)git commit -m Bonjour
 
 5)git log
 
 6)git diff compare les fichiers modifiés mais pas encore ajoutés à l'index,
 tandis que git diff --staged compare les fichiers indexés par git add, mais pas encore committés
 
-7)git show 64b7e73d6869e16a7432826faed706588309f28c
-j'obtiens: 
-"commit 64b7e73d6869e16a7432826faed706588309f28c (HEAD -> develop)
-Author: Elliot Musart~ <elliotmusart@gmail.com>
-Date:   Thu Apr 3 13:27:47 2025 +0200
+7)git show ed5b0
+j'obtiens
+commit ed5b032523fd993549606555f3385308188fab77
+Author: Melinacrt <melinacrt06@gmail.com>
+Date:   Thu Apr 3 18:08:44 2025 +0200
 
-    suppression_ligne2
+    Bonjour
 
 diff --git a/README.md b/README.md
 new file mode 100644
-index 0000000..a1e54e7
+index 0000000..659137f
 --- /dev/null
 +++ b/README.md
-@@ -0,0 +1,2 @@
-+# TP1 Git - Musart_Elliot
-+#Ajout d'une deuxième ligne"
+@@ -0,0 +1 @@
++# TP1 Git - Cariot Mélina
+diff --git a/reponses.txt b/reponses.txt
+new file mode 100644
+index 0000000..3532439
+--- /dev/null
++++ b/reponses.txt
+@@ -0,0 +1,59 @@
++CARIOT Mélina
++
++1)
 
 Git show affiche les details d un commit specifique,
 git status affiche les fichiers modifiés, en attente d'être ajoutés et ceux en attente de commit,
@@ -52,6 +60,38 @@ La commande agit sur la staging area.
  Rien ne s'affiche, donc il n'a pas été commit.
  
  Après le commit du fichier1, lorsque je fais git log ficher1.txt, le commit apparait.
+
+11) pour verifier mes commit : gitlog
+pour verifier que tout a été ajouter : git status 
+Sur la branche develop
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+	brouillon.txt
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
+il y a bien que le fichier brouillon.txt qu'on ne veut pas qui n'est pas suivis; 
+
+12) 
+git log origin/develop
+commit 7823d62044fda5a89fb5064599570dd60abb7852 (HEAD -> develop, origin/develop)
+Author: Melinacrt <melinacrt06@gmail.com>
+Date:   Fri Apr 4 14:18:08 2025 +0200
+
+    nouveau fichier a conserver
+
+commit c91221df5920cc158c9f48dac19ce1c7181ae9a4
+Author: Melinacrt <melinacrt06@gmail.com>
+Date:   Fri Apr 4 14:03:24 2025 +0200
+
+    Ajout d'une ligne
+
+commit ed5b032523fd993549606555f3385308188fab77
+Author: Melinacrt <melinacrt06@gmail.com>
+Date:   Thu Apr 3 18:08:44 2025 +0200
+
+    Bonjour
+13) 
+ git push origin develop
  
  
 
